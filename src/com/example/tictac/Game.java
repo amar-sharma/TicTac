@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import android.widget.TextView;
 public class Game extends Activity implements OnClickListener {
 
 	ImageButton ib[][] = new ImageButton[3][3];
+	Button back ;
 	TextView display;
 	int in1, in2, click = 0;
 	int gameMatrix[][] = new int[3][3];
@@ -36,6 +38,10 @@ public class Game extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 
+		if(v.getId()==R.id.bBack)
+		{
+			finish();
+		}
 		if (click % 2 == 0) {
 			switch (v.getId()) {
 			case R.id.ib00:
@@ -359,9 +365,11 @@ public class Game extends Activity implements OnClickListener {
 		ib[2][0] = (ImageButton) findViewById(R.id.ib20);
 		ib[2][1] = (ImageButton) findViewById(R.id.ib21);
 		ib[2][2] = (ImageButton) findViewById(R.id.ib22);
+		back = (Button) findViewById(R.id.bBack);
 		for (in1 = 0; in1 < 3; in1++)
 			for (in2 = 0; in2 < 3; in2++)
 				ib[in1][in2].setOnClickListener(this);
+		back.setOnClickListener(this);
 		display = (TextView) findViewById(R.id.tV);
 	}
 }

@@ -31,6 +31,7 @@ public final class R {
         public static final int splash_background=0x7f020011;
     }
     public static final class id {
+        public static final int bBack=0x7f07000d;
         public static final int bExit=0x7f070000;
         public static final int bNewGame=0x7f070002;
         public static final int bSettings=0x7f070001;
@@ -43,8 +44,8 @@ public final class R {
         public static final int ib20=0x7f070009;
         public static final int ib21=0x7f07000a;
         public static final int ib22=0x7f07000b;
-        public static final int menu_settings=0x7f07000e;
-        public static final int pB1=0x7f07000d;
+        public static final int menu_settings=0x7f07000f;
+        public static final int pB1=0x7f07000e;
         public static final int tV=0x7f07000c;
     }
     public static final class layout {
